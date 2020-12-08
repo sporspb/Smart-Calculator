@@ -13,26 +13,26 @@ enum Direction {
     }
 
     public Direction turnLeft() {
-        return getDirection(LEFT, RIGHT, DOWN, UP);
+        return getDirection();
     }
 
-    private Direction getDirection(Direction left, Direction right, Direction down, Direction up) {
+    private Direction getDirection() {
         switch (this) {
             case UP:
-                return left;
+                return Direction.LEFT;
             case DOWN:
-                return right;
+                return Direction.RIGHT;
             case LEFT:
-                return down;
+                return Direction.DOWN;
             case RIGHT:
-                return up;
+                return Direction.UP;
             default:
                 throw new IllegalStateException();
         }
     }
 
     public Direction turnRight() {
-        return getDirection(RIGHT, LEFT, UP, DOWN);
+        return getDirection();
     }
 
     public int dx() {
